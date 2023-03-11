@@ -29,3 +29,15 @@ class ServiceRequest(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+
+
+class RentalRequest(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    car_model = models.CharField(max_length=100)
+    num_days = models.IntegerField()
+
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} {self.car_model}"

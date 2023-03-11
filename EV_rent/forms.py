@@ -1,5 +1,5 @@
 from django import forms
-from .models import Car, ServiceRequest
+from .models import Car, ServiceRequest, RentalRequest
 
 # class ServiceRequestForm(forms.Form):
 #     first_name = forms.CharField(max_length=100)
@@ -18,4 +18,13 @@ class ServiceRequestForm(forms.ModelForm):
 
     car_model = forms.ModelChoiceField(queryset=Car.objects.all())
     photos = forms.ImageField(required=False, widget=forms.ClearableFileInput(attrs={'multiple': True}))
+
+
+class RentalRequestForm(forms.ModelForm):
+    class Meta:
+        model = RentalRequest
+        fields = ['first_name', 'last_name', 'email', 'car_model', 'num_days']
+
+    car_model = forms.ModelChoiceField(queryset=Car.objects.all())
+
 
