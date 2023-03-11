@@ -25,4 +25,5 @@ def service_request(request):
 
 
 def service_request_success(request):
+    print(1)
     return render(request, 'EV_rent/service_request_success.html')
