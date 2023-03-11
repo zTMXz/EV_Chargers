@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} Auth Page {% endblock %}
+
+{% block content %}
+  <ul>
+      <li>User {{ user }}</li>
+      <li>
+          <a href="{% url 'home' %}"></a>
+      </li>
+  </ul>
+{% endblock %}
