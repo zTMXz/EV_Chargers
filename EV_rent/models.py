@@ -3,7 +3,6 @@ from django.db import models
 #Электромобили (ид, Модель, Тип зарядки, кол-во л.с., сидячих мест, цена аренды)
 
 class Car(models.Model):
-    id = models.IntegerField(primary_key=True)
     car_brand = models.CharField(max_length=50)
     model = models.CharField(max_length=50)
     charge_type = models.CharField(max_length=100)
