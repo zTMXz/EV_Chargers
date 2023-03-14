@@ -3,17 +3,62 @@
 {% block title %} Login {% endblock %}
 
 {% block content %}
-    <h1> Login </h1>
-    <hr>
-    {% if form.errors %}
-        <p>{{ form.errors.error }}</p>
-    {% endif %}
-
-    <form action="{% url 'login' %}" method="post">
-        {{ form }}
-        {% csrf_token %}
-        <button type="submit" class="btn btn-success">submit</button>
-    </form>
-
-    <a href="{% url 'password_reset' %}">Forgot password?</a>
+ <div class="wrapper">
+      <div class='left'>
+        <p class="imagelabel signinlabel"> Welcome back! </p>
+{#        <img class="imagesignup" src={person} alt="people"></img>#}
+      </div>
+      <div class="sign right">
+        <div class="textsignin">
+          <h1 class='textsign'>
+            Sign in
+          </h1>
+          <p class="plink plinksignup">
+            Don't have an account yet?
+            <a href="{% url 'register' %}"> Sign Up </a>
+          </p>
+        </div>
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+{#          <ToastContainer#}
+{#            position="top-right"#}
+{#            autoClose={5000}#}
+{#            hideProgressBar={false}#}
+{#            newestOnTop={false}#}
+{#            closeOnClick#}
+{#            rtl={false}#}
+{#            pauseOnFocusLoss#}
+{#            draggable#}
+{#            pauseOnHover#}
+{#            theme="light"#}
+{#          />#}
+          <div class="divinput">
+            <label class="inputlabel">Username</label>
+            {{ form.username }}
+          </div>
+          <div class="divinput">
+            <label class="inputlabel">Password</label>
+            {{ form.password }}
+          </div>
+          <button type="submit" class="btn btn-success">Sign In</button>
+        </form>
+      </div>
+    </div>
 {% endblock %}
+
+{##}
+{#{% block content %}#}
+{#    <h1> Login </h1>#}
+{#    <hr>#}
+{#    {% if form.errors %}#}
+{#        <p>{{ form.errors.error }}</p>#}
+{#    {% endif %}#}
+{##}
+{#    <form action="{% url 'login' %}" method="post">#}
+{#        {{ form }}#}
+{#        {% csrf_token %}#}
+{#        <button type="submit" class="btn btn-success">submit</button>#}
+{#    </form>#}
+{##}
+{#    <a href="{% url 'password_reset' %}">Forgot password?</a>#}
+{#{% endblock %}#}
