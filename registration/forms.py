@@ -3,8 +3,8 @@ from .models import Registration
 from django.contrib.auth.forms import AuthenticationForm
 
 class LoginForm(AuthenticationForm):
-    username = forms.EmailField(widget=forms.EmailInput(attrs={'autofocus': True, 'placeholder': 'Email'}))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Password'}))
+    username = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control", 'autofocus': True, 'placeholder': 'Email'}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={"class":"form-control", 'type':"password", 'placeholder':"Password"}))
 
 
 class RegistrationForm(forms.ModelForm):

@@ -34,7 +34,6 @@ AUTH_USER_MODEL = "users.User"
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-GOOGLE_MAPS_API_KEY = 'AIzaSyBeUunUYfWSPdCXtX9kQyNcr4c92-oaC2w'
 
 EMAIL_HOST = "smtp.yandex.ru"
 EMAIL_PORT = 465
@@ -61,6 +60,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'crispy_forms',
     "EV_rent",
+    "widget_tweaks"
 ]
 
 MIDDLEWARE = [
@@ -156,6 +156,10 @@ STATIC_URL = "/static/"
 
 STATIC_DIRS = [
     BASE_DIR / "static",
+]
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
 ]
 
 # Основной url для управления медиафайлами
