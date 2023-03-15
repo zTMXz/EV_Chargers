@@ -1,3 +1,11 @@
+    body{
+        background-image: url("/media/image_cars/back.png");
+    }
+
+    .container-fluid{
+        margin-left: 30%;
+    }
+
     a.desc{
         padding-left: 1px;
         text-align: left;
@@ -11,7 +19,7 @@
          background-color: #fff;
          font-family: 'Poppins', sans-serif;
          text-align: center;
-         margin-top: 45%;
+         margin-top: 40%;
          padding: 30px 25px;
          border-radius: 10px;
          box-shadow: 0 0 25px -15px rgba(0,0,0,0.3);
@@ -93,7 +101,7 @@
          height: 40px;
          padding: 6px 12px;
          border-radius: 5px;
-         border: 2px solid #F2F5F6;
+         border: 2px solid #eef0f1;
          box-shadow: none;
     }
 
@@ -103,7 +111,7 @@
     }
 
     .form-horizontal .form-control::placeholder{
-         color: #e1e1e1;
+         color: #797878;
          font-size: 14px;
          font-weight: 300;
     }
