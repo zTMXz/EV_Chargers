@@ -9,6 +9,7 @@
     <title>{% block title %}Electric Cars{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     {% block style_css %}{% endblock %}
+    {% block head %}{% endblock %}
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -44,10 +45,8 @@
     </div>
 </nav>
 
-<div class="container" style="margin-top: 80px;">
-    {% block content %}{% endblock %}
-</div>
-
 {% block cnt %}{% endblock %}
+{% block content %}{% endblock %}
+
 </body>
 </html>

@@ -1,9 +1,7 @@
     body{
-        background-image: url("/media/image_cars/back.png");
-    }
-
-    .container-fluid{
-        margin-left: 30%;
+        background-image: url("/media/image_cars/12312415.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     a.desc{
