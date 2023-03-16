@@ -29,8 +29,15 @@ class Register(View):
             login(request, user)
 
             #РАБОТАЕТ, ПОТОМ ПЕРЕПИСАТЬ
-            send_mail(subject='registration',
-                      message='thx for reg',
+            send_mail(subject='Successful Registration Message',
+                      message= f"""
+                        You have successfully registered on EV_Chargers
+                        Your login details:
+                        ===============================
+                            username: {username}
+                            password: {password}
+                        ===============================
+                      """,
                       recipient_list=[email],
                       from_email=DEFAULT_FROM_EMAIL
                       )
