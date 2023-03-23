@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 
 from EV_chargers.settings import DEFAULT_FROM_EMAIL
-from users.forms import UserCreationForm
+from users.forms import UserCreationForm, UserUpdateForm
 
 
 class Register(View):
@@ -26,6 +26,7 @@ class Register(View):
             password = form.cleaned_data.get('password1')
             email = form.cleaned_data.get('email')
             user = authenticate(username=username, password=password)
+
             login(request, user)
 
             #РАБОТАЕТ, ПОТОМ ПЕРЕПИСАТЬ
@@ -51,3 +52,14 @@ class Register(View):
         }
         return render(request, self.template_name, context)
 
+
+def profile(request):
+    if not request.user.is_authenticated:
+        return redirect("login")
+
+    form = UserUpdateForm(request.POST, instance=request.user)
+    if form.is_valid():
+        form.save()
+        return redirect('home')
+
+    return render(request, template_name="registration/profile.html", context={"form":form})
