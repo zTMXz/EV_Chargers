@@ -7,7 +7,7 @@
 
 <table class="table table-bordered table-striped">
 <h2>{{ car.car_brand }} {{ car.model }}</h2>
-<img class="img-fluid" src="{% static 'EV_rent/image' %}{{ car.image.url }}" alt="{{ car.car_brand }} {{ car.model }}">
+<img class="img-fluid" src="{{ car.image.url }}" alt="{{ car.car_brand }} {{ car.model }}">
 
 <div class="row mt-3">
     <div class="col-md-6">

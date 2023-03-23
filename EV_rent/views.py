@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Car
-from .forms import ServiceRequestForm
+from .forms import ServiceRequestForm, RentalRequestForm
 
 
 def car_list(request):
@@ -25,4 +25,19 @@ def service_request(request):
 
 
 def service_request_success(request):
+    return render(request, 'EV_rent/service_request_success.html')
+
+
+def rental_request(request):
+    if request.method == 'POST':
+        form = RentalRequestForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('service_request_success')
+    else:
+        form = RentalRequestForm()
+    return render(request, 'EV_rent/rental_request.html', {'form': form})
+
+
+def rental_request_success(request):
     return render(request, 'EV_rent/service_request_success.html')

@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'crispy_forms',
     "EV_rent",
+    "widget_tweaks"
 ]
 
 MIDDLEWARE = [
@@ -155,6 +156,10 @@ STATIC_URL = "/static/"
 
 STATIC_DIRS = [
     BASE_DIR / "static",
+]
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
 ]
 
 # Основной url для управления медиафайлами
