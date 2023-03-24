@@ -11,9 +11,15 @@
     {% block style_css %}{% endblock %}
     {% block head %}{% endblock %}
     <style>
-        a svg:hover #signIn {
-            fill: #111;
+        @media (min-width: 768px) {
+            .dropdown:hover
+            .dropdown-menu{
+                margin-top:0;
+                min-width: 5rem;
+                display:block
+            }
         }
+
     </style>
 </head>
 <body>
@@ -44,8 +50,13 @@
                 <a class="nav-link" href="#">Contact</a>
             </li>
             {% if user.is_authenticated %}
-                <li class="nav-item" style="position: absolute; right: 30px">
-                    <a class="nav-link" href="{% url 'profile' %}">{{ user }}</a>
+                <li class="nav-item dropdown" style="position: absolute; right: 40px">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown">{{ user }}</a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width: 5rem">
+                        <a class="dropdown-item" href="{% url 'profile' %}">Settings</a>
+                        <a class="dropdown-item" href="{% url 'logout' %}">Sign Out</a>
+                    </div>
                 </li>
             {% else %}
                 <li class="nav-item" style="position: absolute; right: 30px">
