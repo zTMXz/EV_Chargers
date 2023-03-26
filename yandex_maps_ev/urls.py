@@ -1,10 +1,8 @@
-from django.urls import path, include
+from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from . import views
+from yandex_maps_ev import views
 
 urlpatterns = [
-    path("", views.index, name='map'),
-    path("ya/", views.yan, name='map_ya'),
-
+    path("", views.yandex_maps, name='map_ya'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
