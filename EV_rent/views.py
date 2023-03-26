@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Car
+from .models import Car, ServiceRequest, RentalRequest
 from .forms import ServiceRequestForm, RentalRequestForm
 
 
@@ -18,6 +18,12 @@ def service_request(request):
         form = ServiceRequestForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+
+            model = " ".join(str(form.cleaned_data.get('car_model')).split()[1:])
+            car = Car.objects.get(model=model)
+            car.is_broken = True
+            car.save()
+
             return redirect('service_request_success')
     else:
         form = ServiceRequestForm()
@@ -33,6 +39,15 @@ def rental_request(request):
         form = RentalRequestForm(request.POST)
         if form.is_valid():
             form.save()
+
+            model = " ".join(str(form.cleaned_data.get('car_model')).split()[1:])
+            rent = RentalRequest.objects.get(car_model=form.cleaned_data.get('car_model'))
+            car = Car.objects.get(model=model)
+            car.is_rented = True
+            rent.is_rented = True
+            car.save()
+            rent.save()
+
             return redirect('service_request_success')
     else:
         form = RentalRequestForm()
