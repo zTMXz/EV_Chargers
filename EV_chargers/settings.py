@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "users",
-    "google_maps_ev",
+    "yandex_maps_ev",
     "django_google_maps",
     'corsheaders',
     'crispy_forms',
@@ -113,7 +113,7 @@ WSGI_APPLICATION = "EV_chargers.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'EV_Chargers_DB',
+        'NAME': 'EV_Rent_DB',
         'USER': 'postgres',
         'PASSWORD': 'tima2002',
         'HOST': 'localhost',

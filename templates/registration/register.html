@@ -41,13 +41,20 @@
                     </div>
 
 {#                  ВРЕМЕННО!!!!!!!!!!!!!!!!!!!!!!!!#}
-                    <span class="description">{{ form.errors }}</span>
+                    {% if form.errors %}
+                       <span class="description">{{ form.errors }}</span>
+                    {% endif %}
+
 
                     <button type="submit" class="btn signup">Sign up</button>
                     <a class="btn signin" href="{% url 'login' %}">Sign in</a>
+
                 </form>
             </div>
         </div>
 
     </div>
+
 {% endblock %}
+
+

@@ -14,6 +14,8 @@ class Car(models.Model):
     image = models.ImageField(upload_to='image_cars', blank=True, null=True)
     description = models.TextField()
     url_page = models.CharField(max_length=50)
+    is_broken = models.BooleanField(default=False)
+    is_rented = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.car_brand} {self.model}"
@@ -26,6 +28,8 @@ class ServiceRequest(models.Model):
     car_model = models.CharField(max_length=100)
     description = models.TextField()
     photos = models.ImageField(upload_to='repair_images/%Y/%m/%d/', blank=True)
+    is_broken = models.BooleanField(default=False)
+    is_rented = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
@@ -37,6 +41,8 @@ class RentalRequest(models.Model):
     email = models.EmailField()
     car_model = models.CharField(max_length=100)
     num_days = models.IntegerField()
+    is_broken = models.BooleanField(default=False)
+    is_rented = models.BooleanField(default=False)
 
 
     def __str__(self):

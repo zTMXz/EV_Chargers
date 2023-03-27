@@ -23,7 +23,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', TemplateView.as_view(template_name="home.html"), name="home"),
     path('users/', include('users.urls')),
-    path('map/', include('google_maps_ev.urls')),
+    path('map/', include('yandex_maps_ev.urls')),
     path('rent/', include('EV_rent.urls')),
 ]
 if settings.DEBUG:
