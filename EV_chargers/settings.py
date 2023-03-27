@@ -60,7 +60,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'crispy_forms',
     "EV_rent",
-    "widget_tweaks"
+    "widget_tweaks",
+    "sass_processor"
 ]
 
 MIDDLEWARE = [
@@ -102,6 +103,12 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    "sass_processor.finders.CssFinder"
 ]
 
 WSGI_APPLICATION = "EV_chargers.wsgi.application"
@@ -157,6 +164,8 @@ STATIC_URL = "/static/"
 STATIC_DIRS = [
     BASE_DIR / "static",
 ]
+
+SASS_PROCESSOR_ROOT = BASE_DIR / 'static'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),

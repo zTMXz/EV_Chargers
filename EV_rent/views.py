@@ -5,6 +5,7 @@ from .forms import ServiceRequestForm, RentalRequestForm
 
 def car_list(request):
     cars = Car.objects.all()
+    print(cars[0].image.url)
     return render(request, 'EV_rent/car_list.html', {'cars': cars})
 
 
