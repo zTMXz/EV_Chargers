@@ -1,3 +1,4 @@
+{% load i18n %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -52,37 +53,48 @@
             </g>
         </svg>
     </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">Home</a>
+                <a class="nav-link" href="{% url 'home' %}">{% trans "Home" %}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'map_ya' %}">Map</a>
+                <a class="nav-link" href="{% url 'map_ya' %}">{% trans "Map" %}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'rent' %}">Rent</a>
+                <a class="nav-link" href="{% url 'rent' %}">{% trans "Rent" %}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'service_request' %}">Service Request</a>
+                <a class="nav-link" href="{% url 'service_request' %}">{% trans "Service Request" %}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">{% trans "About" %}</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+            <li class="nav-item dropdown" aria-labelledby="navbarDropdown" style="position:absolute; cursor: pointer; right: 120px;">
+                <p class="nav-link dropdown-toggle" id="navbarDropdown" style="margin-bottom: 0">{% trans "Language" %}</p>
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width: 5rem; ">
+                    {% for language in languages %}
+                        <a class="dropdown-item" href="/{{ language.code }}/{{request.get_full_path|slice:"4:"}}">
+                            {{ language.name_local }} ({{ language.code }})
+                        </a>
+                    {% endfor %}
+                </div>
             </li>
             {% if user.is_authenticated %}
                 <li class="nav-item dropdown" style="position: absolute; cursor: pointer; right: 40px;">
                     <p class="nav-link dropdown-toggle" id="navbarDropdown" style="margin-bottom: 0">{{ user }}</p>
 
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width: 5rem; ">
-                        <a class="dropdown-item" href="{% url 'profile' %}">Settings</a>
-                        <a class="dropdown-item" href="{% url 'logout' %}">Sign Out</a>
+                        <a class="dropdown-item" href="{% url 'profile' %}">{% trans "Settings" %}</a>
+                        <a class="dropdown-item" href="{% url 'logout' %}">{% trans "Sign Out" %}</a>
                     </div>
                 </li>
             {% else %}

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 {% load widget_tweaks %}
 
 {% block title %} Profile {% endblock %}
@@ -15,7 +15,7 @@
 
         <div class="offset-md-4 col-md-4 offset-sm-3 col-sm-6">
             <div class="form-container">
-                <h3 class="title">Edit Profile</h3>
+                <h3 class="title">{% trans "Edit Profile" %}</h3>
 
                 <form class="form-horizontal" action="{% url 'profile' %}" method="post">
                     {% csrf_token %}
@@ -27,24 +27,24 @@
 {#                        {% render_field form.username|add_class:"form-control" placeholder="Username" %}#}
 {#                    </div>#}
                     <div class="form-group">
-                        <input class="form-control" type="text" name="first_name" id="id_first_name" placeholder="First Name" value={{ user.first_name }}>
+                        <input class="form-control" type="text" name="first_name" id="id_first_name" placeholder="{% trans "First Name" %}" value={{ user.first_name }}>
 {#                        {% render_field form.first_name|add_class:"form-control" placeholder="First Name" %}#}
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="text" name="last_name" id="id_last_name" placeholder="Last Name" value={{ user.last_name }}>
+                        <input class="form-control" type="text" name="last_name" id="id_last_name" placeholder="{% trans "Last Name" %}" value={{ user.last_name }}>
 {#                         {% render_field form.last_name|add_class:"form-control" placeholder="Last Name" %}#}
                     </div>
 
                     <span class="description" style="margin-bottom: 35px; margin-top: 10px">
-                     <a class="desc" href="{% url 'password_reset' %}">Forgot password?</a>
+                     <a class="desc" href="{% url 'password_reset' %}">{% trans "Forgot password" %}?</a>
                     </span>
 
 
 {#                  ВРЕМЕННО!!!!!!!!!!!!!!!!!!!!!!!!#}
 {#                    <span class="description">{{ form.errors }}</span>#}
 
-                    <button type="submit" class="btn signup">Sign up</button>
-                    <a class="btn signin" href="{% url 'login' %}">Sign in</a>
+                    <button type="submit" class="btn signup">{% trans "Sign up" %}</button>
+                    <a class="btn signin" href="{% url 'login' %}">{% trans "Sign in" %}</a>
                 </form>
             </div>
         </div>
