@@ -6,67 +6,169 @@
 /*    height: 200px;*/
 /*}*/
 
+.container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 10px;
+}
 
 .product-card {
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
-	transition: all .3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    height: 440px;
+    width: 400px;
+    row-gap: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+    transition: all .3s;
 }
 
 .product-card:hover {
-	box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
 }
 
 .product-thumb a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 235px;
-	padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
 }
 
 .product-thumb img {
-	max-width: 110%;
-	max-height: 100%;
+    border: rgb(150, 150, 150, 0.7) solid 1px;
+    border-radius: 5px;
+    max-width: 110%;
+    max-height: 100%;
 }
+
+.icon-data {
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+.item-wrapper {
+    display: flex;
+    justify-content: space-between
+}
+
+.wrapper-left .icon-data {
+    font-size: 20px;
+    padding: 7px;
+    margin-left: 20px;
+}
+
+.wrapper-right .icon-data {
+    font-size: 20px;
+    padding: 7px;
+    margin-right: 20px;
+}
+
 
 .product-details {
-	padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 
-.product-details a h5{
-	font-weight: 500;
-	display: block;
-	height: 20px;
-	overflow: hidden;
-	text-decoration: none;
+.product-details a h5 {
+    font-weight: 650;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    height: 25px;
+    overflow: hidden;
+    text-decoration: none;
 }
 
 .product-details p {
-	font-size: 15px;
-	color: #999;
-	overflow: hidden;
+    font-size: 15px;
+    color: #999;
+    overflow: hidden;
 }
 
 .product-bottom-details {
-	overflow: hidden;
-	border-top: 1px solid #eee;
-	padding-top: 20px;
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
 }
 
 .product-price {
-	font-size: 18px;
-	color: #ee6e73;
-	font-weight: 600;
+    font-size: 18px;
+    color: #ee6e73;
+    font-weight: 600;
 }
 
 .product-price small {
-	color: #ccc;
-	font-weight: 400;
-	text-decoration: line-through;
-	margin-right: 5px;
+    color: #ccc;
+    font-weight: 400;
+    text-decoration: line-through;
+    margin-right: 5px;
 }
 
 .product-links a {
-	font-size: 20px;
-	margin-left: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.btn-group .btn1 {
+    background-color: #4E4C97;
+    color: white;
+}
+
+.btn-group .btn1:hover {
+    color: #fff;
+    background-color: #41a0c0;
+}
+
+.btn-group .btn2 {
+    background-color: #fff;
+    color: #8d8b8b;
+}
+
+.btn-group .btn2:hover {
+    background-color: #6c69d2;
+}
+
+
+/*filter*/
+
+.myBtnContainer.btn-group{
+    margin: 100px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 10px;
+}
+
+.filterDiv {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+    transition: all .3s;
+    float:left;
+    display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+.myBtnContainer.btn-group .btn.active {
+    background-color: #6c69d2;
+    color: white;
 }
