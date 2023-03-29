@@ -1,17 +1,20 @@
 from django.shortcuts import render, redirect
 from .models import Car, ServiceRequest, RentalRequest
 from .forms import ServiceRequestForm, RentalRequestForm
+from django.views.generic.base import View
+from django.views.generic import ListView, DetailView
 
 
-def car_list(request):
-    cars = Car.objects.all()
-    print(cars[0].image.url)
-    return render(request, 'EV_rent/car_list.html', {'cars': cars})
+class CarList(ListView):
+    model = Car
+    queryset = Car.objects.all()
+    # здесь template_name = "EV_rent/car_list.html" по умолчанию, так как django ищет html с ИМЯ-МОДЕЛИ_list.html
+    context_object_name = "cars"
 
-
-def get_model_info(request, model: str):
-    car = Car.objects.get(url_page=model)
-    return render(request, 'EV_rent/car_info.html', {'car': car})
+class ModelDetailView(DetailView):
+    model = Car
+    slug_field = "url_page"
+    # здесь template_name = "EV_rent/car_detail.html" по умолчанию, так как django ищет html с ИМЯ-МОДЕЛИ_detail.html
 
 
 def service_request(request):

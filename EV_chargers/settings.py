@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 # superuser login: zTMXz, pass: tima2002
+# django-admin makemessages -l ru -e html
+# django-admin compilemessages
 
 from pathlib import Path
 

@@ -1,6 +1,8 @@
 from django.db import models
+from django.urls import reverse
 
-#Электромобили (ид, Модель, Тип зарядки, кол-во л.с., сидячих мест, цена аренды)
+
+# Электромобили (ид, Модель, Тип зарядки, кол-во л.с., сидячих мест, цена аренды)
 
 class Car(models.Model):
     car_brand = models.CharField(max_length=50)
@@ -13,9 +15,12 @@ class Car(models.Model):
     year = models.IntegerField()
     image = models.ImageField(upload_to='image_cars', blank=True, null=True)
     description = models.TextField()
-    url_page = models.CharField(max_length=50)
+    url_page = models.SlugField(max_length=50, unique=True)
     is_broken = models.BooleanField(default=False)
     is_rented = models.BooleanField(default=False)
+
+    def get_absolute_url(self):
+        return reverse("model_info", kwargs={"slug": self.url_page})
 
     def __str__(self):
         return f"{self.car_brand} {self.model}"
@@ -43,7 +48,6 @@ class RentalRequest(models.Model):
     num_days = models.IntegerField()
     is_broken = models.BooleanField(default=False)
     is_rented = models.BooleanField(default=False)
-
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} {self.car_model}"

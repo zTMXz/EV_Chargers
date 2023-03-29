@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-28 10:00+0300\n"
+"POT-Creation-Date: 2023-03-28 19:12+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,12 +45,14 @@ msgid "Range"
 msgstr "Дальность хода"
 
 #: .\EV_rent\templates\EV_rent\car_info.html:85
+#: .\EV_rent\templates\EV_rent\car_list.html:72
 msgid "km"
 msgstr "км"
 
 #: .\EV_rent\templates\EV_rent\car_info.html:88
+#: .\EV_rent\templates\EV_rent\car_list.html:34
 msgid "Seats"
-msgstr "Число мест"
+msgstr "Мест"
 
 #: .\EV_rent\templates\EV_rent\car_info.html:92
 msgid "Price"
@@ -60,11 +62,15 @@ msgstr "Цена"
 msgid "Description"
 msgstr "Описание"
 
-#: .\EV_rent\templates\EV_rent\car_list.html:30
+#: .\EV_rent\templates\EV_rent\car_list.html:97
+msgid "HP"
+msgstr "л.с."
+
+#: .\EV_rent\templates\EV_rent\car_list.html:105
 msgid "View"
 msgstr "Подробности"
 
-#: .\EV_rent\templates\EV_rent\car_list.html:32 .\templates\base.html:69
+#: .\EV_rent\templates\EV_rent\car_list.html:107 .\templates\base.html:69
 msgid "Rent"
 msgstr "Аренда"
 
@@ -210,3 +216,6 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:249
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "Automatic"
+#~ msgstr "Автомат"
