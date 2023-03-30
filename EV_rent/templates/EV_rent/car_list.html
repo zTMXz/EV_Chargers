@@ -22,7 +22,6 @@
 
     <div class="container">
         {% for car in cars %}
-            {% if car.is_broken == False and car.is_rented == False %}
                 <div class="product-card filterDiv {{ car.car_brand }} {{ car.year }}">
                     <div class="product-thumb">
                         <a href="{{ car.get_absolute_url }}" style="text-decoration: none;">
@@ -113,12 +112,15 @@
                             <div class="product-price">
                                 ${{ car.rent_price }} <span class="color-text"> / {% trans 'day' %}</span>
                             </div>
-                            <a href="{% url 'rental_request' %}"
-                               class="btn btn2">{% trans "Rent" %}</a>
+                            {% if car.is_broken == True or car.is_rented == True %}
+                                <span class="unavailable">{% trans 'temporarily unavailable..' %}</span>
+                            {% else %}
+                                <a href="{% url 'rental_request' car_id=car.id %}"
+                                   class="btn btn2">{% trans "Rent" %}</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
-            {% endif %}
         {% endfor %}
     </div>
 
