@@ -1,0 +1,100 @@
+.car-title {
+    overflow: hidden; /* Скрываем линии, чтобы они не выходили за ширину блока заголовка */
+    margin-top: 60px;
+    margin-bottom: 15px;
+    /*display: flex;*/
+    /*justify-content: center;*/
+
+    text-align: center;
+    font-weight: 500;
+    font-size: 5vw;
+    font-style: italic;
+    color: black;
+}
+
+.car-desc {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    overflow: hidden; /* Скрываем линии, чтобы они не выходили за ширину блока заголовка */
+    margin: 2vw 0; /* Отступ сверху и снизу */
+
+    font-weight: 650;
+    font-size: 3vw;
+    font-style: italic;
+    text-align: center;
+}
+
+.car-text {
+    display: flex;
+    justify-content: center;
+    margin: 0.7vw 2vw;
+
+    text-align: center;
+    font-size: 2.5vw;
+    font-style: italic;
+}
+
+                                        /*ICONS*/
+.item-wrapper {
+    display: flex;
+    justify-content: space-between
+}
+
+.wrapper-left .icon-data {
+    padding: 7px;
+    margin-left: 25vw;
+
+    font-size: 2.5vw;
+    font-style: italic;
+}
+
+.wrapper-right .icon-data {
+    padding: 7px;
+    margin-right: 25vw;
+
+    font-size: 2.5vw;
+    font-style: italic;
+}
+
+.icon-data-last {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vw;
+
+    font-size: 2.5vw;
+    font-style: italic;
+}
+                                        /*END-ICONS*/
+
+
+                                        /*CAROUSEL*/
+.carousel.slide {
+    width: 100%;
+    height: 100%;
+}
+                                        /*END-CAROUSEL*/
+
+
+
+                                        /*LEFT-RIGHT-LINES*/
+.title-side-line:before,
+.title-side-line:after {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	width: 100%; /* Устанавливаем ширину в 100%, что сделает делает линию равной ширине тега заголовка */
+	height: 0.3vw; /* Высота линий */
+    background: #8f70ee; /* Цвет линий */
+	border: solid #fff; /* Добавляем к линиям границу с цветом основного фона заголовка, для отступа от текста */
+	border-width: 0 2vw; /* Отступ от текста */
+}
+.title-side-line:before {
+	margin-left: -100%;
+}
+.title-side-line:after {
+	margin-right: -100%;
+}
+                                        /*END-LEFT-RIGHT-LINES*/
+
+
