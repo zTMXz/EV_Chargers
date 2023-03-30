@@ -40,6 +40,8 @@ footer {
 
 .wrapper-center-base.svg-icon {
     padding: 20px;
+    padding-bottom: 0;
+    height: 175px;
     /*margin-left: 100px;*/
     /*margin-right: 100px;*/
 }
