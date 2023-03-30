@@ -7,11 +7,10 @@
 /*}*/
 
 .container {
-    overflow: hidden;
     display: flex;
     justify-content: center;
     height: 100%;
-    margin-top: 60px;
+    margin-top: 10px;
     flex-wrap: wrap;
     column-gap: 20px;
     row-gap: 20px;
@@ -81,7 +80,7 @@
     font-size: 24px;
     display: block;
     text-align: center;
-    height: 25px;
+    height: 30px;
     overflow: hidden;
     text-decoration: none;
 }
@@ -99,46 +98,56 @@
 }
 
 .product-price {
-    font-size: 18px;
-    color: #ee6e73;
+    font-size: 25px;
     font-weight: 600;
+    color: #4E4C97;
 }
 
-.product-price small {
-    color: #ccc;
-    font-weight: 400;
-    text-decoration: line-through;
-    margin-right: 5px;
+.color-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: #999;
 }
 
-.product-links a {
-    font-size: 20px;
-    margin-left: 10px;
-}
+/*.btn.btn2 {*/
+/*    background-color: #4E4C97;*/
+/*    color: #fff;*/
+/*}*/
 
-.btn-group .btn1 {
-    background-color: #4E4C97;
-    color: white;
-}
+/*.btn.btn2:hover {*/
+/*    background-color: #6c69d2;*/
+/*}*/
 
-.btn-group .btn1:hover {
-    color: #fff;
-    background-color: #41a0c0;
-}
+.btn.btn2 {
+         color: #fff;
+         background-color: #4E4C97;
+         font-size: 16px;
+         font-weight: 600;
+         letter-spacing: 0.5px;
+         text-transform: capitalize;
+         width: 100px;
+         padding: 8px;
+         border: 2px solid #4E4C97;
+         border-radius: 15px;
+         display: inline-block;
+         transition: all 0.3s ease 0s;
+    }
 
-.btn-group .btn2 {
-    background-color: #fff;
-    color: #8d8b8b;
-}
-
-.btn-group .btn2:hover {
-    background-color: #6c69d2;
+.btn.btn2:hover,
+.btn.btn2:focus{
+     color: #4E4C97;
+     background-color: #fff;
+     box-shadow: 0 0 5px #4E4C97, 0 0 15px #4E4C97 inset;
 }
 
 
 /*filter*/
 
 .myBtnContainer.btn-group{
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #e3dcec;
+
     margin: 100px auto 0 auto;
     display: flex;
     justify-content: center;
@@ -146,16 +155,6 @@
     flex-wrap: wrap;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    margin-top: 10px;
-    flex-wrap: wrap;
-    column-gap: 20px;
-    row-gap: 20px;
-    padding: 10px;
-}
 
 .filterDiv {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
@@ -168,7 +167,8 @@
 .show {
     display: block;
 }
+
 .myBtnContainer.btn-group .btn.active {
-    background-color: #6c69d2;
+    background-color: #4E4C97;
     color: white;
 }
