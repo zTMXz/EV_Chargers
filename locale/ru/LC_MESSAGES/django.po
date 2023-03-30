@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-30 13:19+0300\n"
+"POT-Creation-Date: 2023-03-30 17:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,46 +20,55 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\EV_rent\templates\EV_rent\car_detail.html:53
+#: .\EV_rent\templates\EV_rent\car_detail.html:6
+msgid "Car Info"
+msgstr "Информация о машине"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:55
 msgid "Description"
 msgstr "Описание"
 
-#: .\EV_rent\templates\EV_rent\car_detail.html:58
+#: .\EV_rent\templates\EV_rent\car_detail.html:60
 msgid "Specifications"
 msgstr "Характеристики"
 
-#: .\EV_rent\templates\EV_rent\car_detail.html:68
-#: .\EV_rent\templates\EV_rent\car_list.html:42
+#: .\EV_rent\templates\EV_rent\car_detail.html:70
+#: .\EV_rent\templates\EV_rent\car_list.html:44
 msgid "Seats"
 msgstr "Мест"
 
-#: .\EV_rent\templates\EV_rent\car_detail.html:107
-#: .\EV_rent\templates\EV_rent\car_list.html:80
+#: .\EV_rent\templates\EV_rent\car_detail.html:109
+#: .\EV_rent\templates\EV_rent\car_list.html:82
 msgid "km"
 msgstr "км"
 
-#: .\EV_rent\templates\EV_rent\car_detail.html:121
+#: .\EV_rent\templates\EV_rent\car_detail.html:123
 msgid "year"
 msgstr "год"
 
-#: .\EV_rent\templates\EV_rent\car_detail.html:133
-#: .\EV_rent\templates\EV_rent\car_list.html:104
+#: .\EV_rent\templates\EV_rent\car_detail.html:135
+#: .\EV_rent\templates\EV_rent\car_list.html:106
 msgid "HP"
 msgstr "л.с."
 
-#: .\EV_rent\templates\EV_rent\car_list.html:13
+#: .\EV_rent\templates\EV_rent\car_list.html:4
+msgid "Car List"
+msgstr "Список машин"
+
+#: .\EV_rent\templates\EV_rent\car_list.html:15
 msgid "Show all"
 msgstr "Все"
 
-#: .\EV_rent\templates\EV_rent\car_list.html:112
+#: .\EV_rent\templates\EV_rent\car_list.html:114
 msgid "day"
 msgstr "день"
 
-#: .\EV_rent\templates\EV_rent\car_list.html:115 .\templates\base.html:63
-#: .\templates\base.html:122
+#: .\EV_rent\templates\EV_rent\car_list.html:117 .\templates\base.html:65
+#: .\templates\base.html:124
 msgid "Rent"
 msgstr "Аренда"
 
+#: .\EV_rent\templates\EV_rent\rental_request.html:5
 #: .\EV_rent\templates\EV_rent\rental_request.html:18
 msgid "Rental Request"
 msgstr "Запрос Аренды"
@@ -69,8 +78,9 @@ msgstr "Запрос Аренды"
 msgid "Choose car"
 msgstr "Выберите машину"
 
-#: .\EV_rent\templates\EV_rent\service_request.html:18 .\templates\base.html:66
-#: .\templates\base.html:123
+#: .\EV_rent\templates\EV_rent\service_request.html:5
+#: .\EV_rent\templates\EV_rent\service_request.html:18 .\templates\base.html:68
+#: .\templates\base.html:125
 msgid "Service Request"
 msgstr "Сообщить о поломке"
 
@@ -78,86 +88,122 @@ msgstr "Сообщить о поломке"
 msgid "Submit"
 msgstr "Подтвердить"
 
-#: .\EV_rent\templates\EV_rent\service_request_success.html:5
+#: .\EV_rent\templates\EV_rent\service_request_success.html:4
+#: .\EV_rent\templates\EV_rent\service_request_success.html:7
 msgid "Service Request Submitted"
 msgstr "Сообщение о поломке принято"
 
-#: .\templates\base.html:57 .\templates\base.html:120
+#: .\templates\base.html:59 .\templates\base.html:122 .\templates\home.html:4
 msgid "Home"
 msgstr "Главная"
 
-#: .\templates\base.html:60 .\templates\base.html:121
+#: .\templates\base.html:62 .\templates\base.html:123
 msgid "Map"
 msgstr "Карта"
 
-#: .\templates\base.html:69
+#: .\templates\base.html:71
 msgid "About"
 msgstr "О нас"
 
-#: .\templates\base.html:74
+#: .\templates\base.html:76
 msgid "Language"
 msgstr "Язык"
 
-#: .\templates\base.html:92
+#: .\templates\base.html:94
 msgid "Settings"
 msgstr "Настройки"
 
-#: .\templates\base.html:93
+#: .\templates\base.html:95 .\templates\home.html:17
 msgid "Sign Out"
 msgstr "Выйти"
 
-#: .\templates\base.html:119
+#: .\templates\base.html:121
 msgid "Useful links"
 msgstr "Полезные ссылки"
 
-#: .\templates\base.html:151
+#: .\templates\base.html:153
 msgid "Contact"
 msgstr "Контакты"
 
-#: .\templates\base.html:157
+#: .\templates\base.html:159
 msgid "Minsk, Gikalo 9, BY"
 msgstr "Беларусь, Минск, ул. Гикало 9"
 
+#: .\templates\home.html:19 .\templates\registration\login.html:5
 #: .\templates\registration\login.html:18
 msgid "Sign In"
 msgstr "Войти"
+
+#: .\templates\home.html:20 .\templates\registration\register.html:5
+#: .\templates\registration\register.html:18
+msgid "Sign Up"
+msgstr "Регистрация"
 
 #: .\templates\registration\login.html:25
 msgid "or use you username for sign in"
 msgstr "или используйте ваш username для входа"
 
 #: .\templates\registration\login.html:36
-#: .\templates\registration\profile.html:39
+#: .\templates\registration\profile.html:31
 msgid "Forgot password"
 msgstr "Забыли пароль"
 
 #: .\templates\registration\login.html:39
-#: .\templates\registration\profile.html:47
+#: .\templates\registration\profile.html:39
 #: .\templates\registration\register.html:50
 msgid "Sign in"
 msgstr "Войти"
 
 #: .\templates\registration\login.html:40
-#: .\templates\registration\profile.html:46
+#: .\templates\registration\profile.html:38
 #: .\templates\registration\register.html:49
 msgid "Sign up"
 msgstr "Регистрация"
+
+#: .\templates\registration\password_reset_done.html:5
+#: .\templates\registration\password_reset_done.html:8
+msgid "Password Reset Done"
+msgstr "Сброс пароля успешно выполнен"
+
+#: .\templates\registration\password_reset_done.html:11
+msgid ""
+"We’ve emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr "Мы выслали вам инструкцию для установки нового пароля, если ваш аккаунт существует и привязан к данной почте"
+
+#: .\templates\registration\password_reset_done.html:12
+msgid ""
+"If you don’t receive an email, please make sure you’ve entered the address "
+"you registered with, and check your spam folder."
+msgstr "Если вы не получили сообщение, убедитесь, что вы указали верный адрес электронной почты или проверьте папку СПАМ"
+
+#: .\templates\registration\password_reset_form.html:5
+msgid "Password Reset Form"
+msgstr "Сброс Пароля"
+
+#: .\templates\registration\password_reset_form.html:18
+#, fuzzy
+#| msgid "Password"
+msgid "Password Reset"
+msgstr "Пароль"
+
+#: .\templates\registration\profile.html:5
+#, fuzzy
+#| msgid "Edit Profile"
+msgid "Profile"
+msgstr "Профиль"
 
 #: .\templates\registration\profile.html:18
 msgid "Edit Profile"
 msgstr "Редактировать профиль"
 
-#: .\templates\registration\profile.html:30
+#: .\templates\registration\profile.html:23
 msgid "First Name"
 msgstr "Имя"
 
-#: .\templates\registration\profile.html:34
+#: .\templates\registration\profile.html:27
 msgid "Last Name"
 msgstr "Фамилия"
-
-#: .\templates\registration\register.html:18
-msgid "Sign Up"
-msgstr "Регистрация"
 
 #: .\templates\registration\register.html:25
 msgid "or use you email and username for sign up"
