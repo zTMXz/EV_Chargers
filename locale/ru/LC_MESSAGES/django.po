@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-28 19:12+0300\n"
+"POT-Creation-Date: 2023-03-30 13:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,57 +20,43 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\EV_rent\templates\EV_rent\car_info.html:62
-msgid "Brand"
-msgstr "Марка"
-
-#: .\EV_rent\templates\EV_rent\car_info.html:66
-msgid "Model"
-msgstr "Модель"
-
-#: .\EV_rent\templates\EV_rent\car_info.html:70
-msgid "Year"
-msgstr "Год"
-
-#: .\EV_rent\templates\EV_rent\car_info.html:74
-msgid "Type"
-msgstr "Тип зарядки"
-
-#: .\EV_rent\templates\EV_rent\car_info.html:80
-msgid "HorsePower"
-msgstr "Количество л.с."
-
-#: .\EV_rent\templates\EV_rent\car_info.html:84
-msgid "Range"
-msgstr "Дальность хода"
-
-#: .\EV_rent\templates\EV_rent\car_info.html:85
-#: .\EV_rent\templates\EV_rent\car_list.html:72
-msgid "km"
-msgstr "км"
-
-#: .\EV_rent\templates\EV_rent\car_info.html:88
-#: .\EV_rent\templates\EV_rent\car_list.html:34
-msgid "Seats"
-msgstr "Мест"
-
-#: .\EV_rent\templates\EV_rent\car_info.html:92
-msgid "Price"
-msgstr "Цена"
-
-#: .\EV_rent\templates\EV_rent\car_info.html:99
+#: .\EV_rent\templates\EV_rent\car_detail.html:53
 msgid "Description"
 msgstr "Описание"
 
-#: .\EV_rent\templates\EV_rent\car_list.html:97
+#: .\EV_rent\templates\EV_rent\car_detail.html:58
+msgid "Specifications"
+msgstr "Характеристики"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:68
+#: .\EV_rent\templates\EV_rent\car_list.html:42
+msgid "Seats"
+msgstr "Мест"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:107
+#: .\EV_rent\templates\EV_rent\car_list.html:80
+msgid "km"
+msgstr "км"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:121
+msgid "year"
+msgstr "год"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:133
+#: .\EV_rent\templates\EV_rent\car_list.html:104
 msgid "HP"
 msgstr "л.с."
 
-#: .\EV_rent\templates\EV_rent\car_list.html:105
-msgid "View"
-msgstr "Подробности"
+#: .\EV_rent\templates\EV_rent\car_list.html:13
+msgid "Show all"
+msgstr "Все"
 
-#: .\EV_rent\templates\EV_rent\car_list.html:107 .\templates\base.html:69
+#: .\EV_rent\templates\EV_rent\car_list.html:112
+msgid "day"
+msgstr "день"
+
+#: .\EV_rent\templates\EV_rent\car_list.html:115 .\templates\base.html:63
+#: .\templates\base.html:122
 msgid "Rent"
 msgstr "Аренда"
 
@@ -83,7 +69,8 @@ msgstr "Запрос Аренды"
 msgid "Choose car"
 msgstr "Выберите машину"
 
-#: .\EV_rent\templates\EV_rent\service_request.html:18 .\templates\base.html:72
+#: .\EV_rent\templates\EV_rent\service_request.html:18 .\templates\base.html:66
+#: .\templates\base.html:123
 msgid "Service Request"
 msgstr "Сообщить о поломке"
 
@@ -95,29 +82,41 @@ msgstr "Подтвердить"
 msgid "Service Request Submitted"
 msgstr "Сообщение о поломке принято"
 
-#: .\templates\base.html:63
+#: .\templates\base.html:57 .\templates\base.html:120
 msgid "Home"
 msgstr "Главная"
 
-#: .\templates\base.html:66
+#: .\templates\base.html:60 .\templates\base.html:121
 msgid "Map"
 msgstr "Карта"
 
-#: .\templates\base.html:75
+#: .\templates\base.html:69
 msgid "About"
 msgstr "О нас"
 
-#: .\templates\base.html:78
+#: .\templates\base.html:74
 msgid "Language"
 msgstr "Язык"
 
-#: .\templates\base.html:96
+#: .\templates\base.html:92
 msgid "Settings"
 msgstr "Настройки"
 
-#: .\templates\base.html:97
+#: .\templates\base.html:93
 msgid "Sign Out"
 msgstr "Выйти"
+
+#: .\templates\base.html:119
+msgid "Useful links"
+msgstr "Полезные ссылки"
+
+#: .\templates\base.html:151
+msgid "Contact"
+msgstr "Контакты"
+
+#: .\templates\base.html:157
+msgid "Minsk, Gikalo 9, BY"
+msgstr "Беларусь, Минск, ул. Гикало 9"
 
 #: .\templates\registration\login.html:18
 msgid "Sign In"
@@ -171,51 +170,3 @@ msgstr "Пароль"
 #: .\templates\registration\register.html:40
 msgid "Confirm Password"
 msgstr "Подтвердите пароль"
-
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:221
-msgid "The install worked successfully! Congratulations!"
-msgstr ""
-
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:207
-#, python-format
-msgid ""
-"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
-"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
-msgstr ""
-
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:222
-#, python-format
-msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
-msgstr ""
-
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:230
-msgid "Django Documentation"
-msgstr ""
-
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:231
-msgid "Topics, references, &amp; how-to’s"
-msgstr ""
-
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:239
-msgid "Tutorial: A Polling App"
-msgstr ""
-
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:240
-msgid "Get started with Django"
-msgstr ""
-
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:248
-msgid "Django Community"
-msgstr ""
-
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:249
-msgid "Connect, get help, or contribute"
-msgstr ""
-
-#~ msgid "Automatic"
-#~ msgstr "Автомат"
