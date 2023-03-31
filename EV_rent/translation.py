@@ -5,7 +5,3 @@ from .models import Car, ServiceRequest, RentalRequest
 class CarTranslationOptions(TranslationOptions):
     fields = ['description']
 
-@register(ServiceRequest)
-class ServiceRequestTranslationOptions(TranslationOptions):
-    fields = ['description']
-
