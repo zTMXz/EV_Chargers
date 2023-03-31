@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-31 03:24+0300\n"
+"POT-Creation-Date: 2023-03-31 12:31+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,17 +81,30 @@ msgstr "Аренда"
 msgid "Rental Request"
 msgstr "Запрос Аренды"
 
-#: .\EV_rent\templates\EV_rent\rental_request.html:47
+#: .\EV_rent\templates\EV_rent\rental_request.html:49
 #: .\templates\registration\profile.html:23
 msgid "First Name"
 msgstr "Имя"
 
-#: .\EV_rent\templates\EV_rent\rental_request.html:52
+#: .\EV_rent\templates\EV_rent\rental_request.html:55
 #: .\templates\registration\profile.html:27
 msgid "Last Name"
 msgstr "Фамилия"
 
-#: .\EV_rent\templates\EV_rent\rental_request.html:74
+#: .\EV_rent\templates\EV_rent\rental_request.html:68
+#: .\EV_rent\templates\EV_rent\rental_request.html:70
+msgid "Number of Days"
+msgstr "Количество дней"
+
+#: .\EV_rent\templates\EV_rent\rental_request.html:75
+msgid "Total Cost"
+msgstr "Итоговая стоимость"
+
+#: .\EV_rent\templates\EV_rent\rental_request.html:78
+msgid "Your discount is"
+msgstr "Ваша скидка составляет"
+
+#: .\EV_rent\templates\EV_rent\rental_request.html:90
 #: .\EV_rent\templates\EV_rent\service_request.html:58
 msgid "You are not authorized! You will be redirected to the login page.."
 msgstr ""
