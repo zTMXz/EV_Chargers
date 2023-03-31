@@ -13,6 +13,7 @@
 {% block content %}
     <div class="myBtnContainer btn-group" id="myBtnContainer">
         <button class="btn active" onclick="filterSelection('all')">{% trans 'Show all' %}</button>
+        <button class="btn" onclick="filterSelection('False False')">{% trans 'Available' %}</button>
         <button class="btn" onclick="filterSelection('Tesla')"> Tesla</button>
         <button class="btn" onclick="filterSelection('BMW')"> BMW</button>
         <button class="btn" onclick="filterSelection('AUDI')"> AUDI</button>
@@ -22,7 +23,7 @@
 
     <div class="container">
         {% for car in cars %}
-                <div class="product-card filterDiv {{ car.car_brand }} {{ car.year }}">
+                <div class="product-card filterDiv {{ car.car_brand }} {{ car.is_broken }} {{ car.is_rented }}">
                     <div class="product-thumb">
                         <a href="{{ car.get_absolute_url }}" style="text-decoration: none;">
                             <img src="{{ car.image.url }}" alt="{{ car.car_brand }} {{ car.model }}">
