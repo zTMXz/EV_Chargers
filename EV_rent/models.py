@@ -17,7 +17,7 @@ class Car(models.Model):
     horse_power = models.IntegerField()
     num_sits = models.IntegerField()
     range_km = models.IntegerField()
-    rent_price = models.FloatField()
+    rent_price = models.DecimalField(max_digits=5, decimal_places=2)
     year = models.IntegerField()
     image = models.ImageField(upload_to='image_cars', blank=True, null=True)
     description = models.TextField()
