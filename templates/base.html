@@ -72,7 +72,7 @@
                 <a class="nav-link" href="#">{% trans "About" %}</a>
             </li>
             <li class="nav-item dropdown" aria-labelledby="navbarDropdown"
-                style="position:absolute; cursor: pointer; right: 120px;">
+                style="position:absolute; cursor: pointer; right: 150px;">
                 <p class="nav-link dropdown-toggle" id="navbarDropdown"
                    style="margin-bottom: 0">{% trans "Language" %}</p>
                 {% get_current_language as LANGUAGE_CODE %}
@@ -88,12 +88,16 @@
                 </div>
             </li>
             {% if user.is_authenticated %}
-                <li class="nav-item dropdown" style="position: absolute; cursor: pointer; right: 40px;">
+                <li class="nav-item dropdown" style="position: absolute; cursor: pointer; right: 20px;">
                     <p class="nav-link dropdown-toggle" id="navbarDropdown" style="margin-bottom: 0">{{ user }}</p>
 
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width: 5rem; ">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width: 5rem; right: 0; left: auto">
                         <a class="dropdown-item" href="{% url 'profile' %}">{% trans "Settings" %}</a>
                         <a class="dropdown-item" href="{% url 'logout' %}">{% trans "Sign Out" %}</a>
+                        {% if user.is_superuser %}
+                            <hr class="dropdown-divider">
+                            <a class="dropdown-item" href="{% url 'admin:index' %}" target="_blank">{% trans "Admin Panel" %}</a>
+                        {% endif %}
                     </div>
                 </li>
             {% else %}
