@@ -109,6 +109,12 @@
     color: #999;
 }
 
+.unavailable {
+    font-size: 15px;
+    font-weight: 600;
+    color: #e86868;
+}
+
 /*.btn.btn2 {*/
 /*    background-color: #4E4C97;*/
 /*    color: #fff;*/
