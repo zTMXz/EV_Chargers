@@ -120,20 +120,24 @@
         // Функция для вычисления и обновления значения Total Price
         function updateTotalPrice() {
             const price = parseFloat(priceInput.value.replace(',', '.'));
-            let rentalDays = isNaN(parseInt(rentalDaysInput.value)) ? 1 : parseInt(rentalDaysInput.value);
+            let rentalDays = isNaN(parseInt(rentalDaysInput.value)) ? '' : parseInt(rentalDaysInput.value);
             let totalPrice;
             let discount;
 
             //Ограничение ввода количества дней
-            if (rentalDays < 1) {
-                rentalDays = 1;
-            } else if (rentalDays > 30) {
+            if (rentalDays > 30) {
                 rentalDays = 30;
             }
             rentalDaysInput.value = rentalDays;
 
+            console.log(rentalDays)
+
             //Присваивание скидки и вычисленние итоговой стоимости
-            if (rentalDays >= 1 && rentalDays < 5) {
+            if (!rentalDays) {
+                totalPrice = ''
+                discount = ''
+            }
+            else if (rentalDays >= 1 && rentalDays < 5) {
                 totalPrice = (price * rentalDays);
                 discount = '0%'
             } else if (rentalDays >= 5 && rentalDays < 10) {
@@ -147,7 +151,7 @@
                 discount = '50%'
             }
 
-            totalPriceInput.value = totalPrice.toFixed(2);
+            totalPriceInput.value = totalPrice !== ''?totalPrice.toFixed(2):'';
             discountLabel.innerHTML = discount
         }
 
