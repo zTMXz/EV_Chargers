@@ -10,6 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 # superuser login: zTMXz, pass: tima2002
 # django-admin makemessages -l ru -e html
 # django-admin compilemessages
@@ -25,8 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-ad6m))$7&m_lrua7c=^p1f_wui6=vut*bk-5fhw@^3l#&g9yat"
-
+SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -42,9 +45,11 @@ EMAIL_PORT = 465
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
-EMAIL_HOST_USER = "EV-chargers@yandex.by"
-EMAIL_HOST_PASSWORD = "tgtvazhanrhgqgrh"
-DEFAULT_FROM_EMAIL = "EV-chargers@yandex.by"
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
+
+YANDEX_MAPS_API_KEY = env('YANDEX_MAPS_API_KEY')
 
 
 # Application definition
@@ -78,16 +83,6 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     'corsheaders.middleware.CorsMiddleware',
 ]
-
-# CORS_ALLOWED_ORIGINS = [
-#     "https://maps.googleapis.com",
-#     # "http://127.0.0.1:8000/"
-# ]
-#
-# CORS_ORIGIN_WHITELIST = [
-#     'http://127.0.0.1:8000',  # пример домена
-#     "https://maps.googleapis.com/",
-# ]
 
 ROOT_URLCONF = "EV_chargers.urls"
 
@@ -124,9 +119,9 @@ WSGI_APPLICATION = "EV_chargers.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'EV_Rent_DB',
-        'USER': 'postgres',
-        'PASSWORD': 'tima2002',
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER'),
+        'PASSWORD': env('DATABASE_PASS'),
         'HOST': 'localhost',
         'PORT': '5432',
     }
