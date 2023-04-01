@@ -6,20 +6,18 @@
     /*justify-content: center;*/
 
     text-align: center;
-    font-weight: 500;
-    font-size: 5vw;
+    font-weight: 600;
+    font-size: 42px;
     font-style: italic;
     color: black;
 }
 
 .car-desc {
-    /*display: flex;*/
-    /*justify-content: center;*/
     overflow: hidden; /* Скрываем линии, чтобы они не выходили за ширину блока заголовка */
     margin: 2vw 0; /* Отступ сверху и снизу */
 
     font-weight: 650;
-    font-size: 3vw;
+    font-size: 32px;
     font-style: italic;
     text-align: center;
 }
@@ -30,71 +28,297 @@
     margin: 0.7vw 2vw;
 
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 22px;
     font-style: italic;
 }
 
-                                        /*ICONS*/
+/*ICONS*/
+.dima {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
 .item-wrapper {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 60vw;
 }
 
-.wrapper-left .icon-data {
-    padding: 7px;
-    margin-left: 25vw;
+.wrapper-left .items-left {
+    /*width: 50%;*/
+    height: 100%;
+}
 
-    font-size: 2.5vw;
+.wrapper-right .items-right {
+    /*width: 50%;*/
+    height: 100%;
+}
+
+.items-left .icon-data {
+    padding: 7px;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+
+    font-size: 32px;
     font-style: italic;
 }
 
-.wrapper-right .icon-data {
+.items-right .icon-data {
     padding: 7px;
-    margin-right: 25vw;
+    margin: auto;
+    align-items: center;
+    text-align: center;
 
-    font-size: 2.5vw;
+    font-size: 32px;
     font-style: italic;
 }
 
 .icon-data-last {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5vw;
+    padding: 7px;
+    margin: auto;
+    align-items: center;
+    text-align: center;
 
-    font-size: 2.5vw;
+    font-size: 32px;
     font-style: italic;
 }
-                                        /*END-ICONS*/
+
+/*END-ICONS*/
 
 
-                                        /*CAROUSEL*/
+/*.wrapper-right.price {*/
+/*    margin-right: 10vw;*/
+/*}*/
+
+/*.wrapper-left .price-data {*/
+/*    padding: 7px;*/
+/*    margin-left: 2vw;*/
+
+/*    font-size: 2.5vw;*/
+/*    font-style: italic;*/
+/*}*/
+
+/*.wrapper-right .price-data {*/
+/*    padding: 0 7px;*/
+/*    margin-bottom: 0;*/
+
+/*    font-size: 2.5vw;*/
+/*    font-style: italic;*/
+/*}*/
+
+
+/*CAROUSEL*/
 .carousel.slide {
     width: 100%;
     height: 100%;
 }
-                                        /*END-CAROUSEL*/
+
+/*END-CAROUSEL*/
 
 
-
-                                        /*LEFT-RIGHT-LINES*/
+/*LEFT-RIGHT-LINES*/
 .title-side-line:before,
 .title-side-line:after {
-	content: '';
-	display: inline-block;
-	vertical-align: middle;
-	box-sizing: border-box;
-	width: 100%; /* Устанавливаем ширину в 100%, что сделает делает линию равной ширине тега заголовка */
-	height: 0.3vw; /* Высота линий */
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 100%; /* Устанавливаем ширину в 100%, что сделает делает линию равной ширине тега заголовка */
+    height: 0.3vw; /* Высота линий */
     background: #8f70ee; /* Цвет линий */
-	border: solid #fff; /* Добавляем к линиям границу с цветом основного фона заголовка, для отступа от текста */
-	border-width: 0 2vw; /* Отступ от текста */
+    border: solid #fff; /* Добавляем к линиям границу с цветом основного фона заголовка, для отступа от текста */
+    border-width: 0 2vw; /* Отступ от текста */
 }
+
 .title-side-line:before {
-	margin-left: -100%;
+    margin-left: -100%;
 }
+
 .title-side-line:after {
-	margin-right: -100%;
+    margin-right: -100%;
 }
-                                        /*END-LEFT-RIGHT-LINES*/
+
+/*END-LEFT-RIGHT-LINES*/
+
+.day-prices {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.day-prices .item-day-price {
+    padding: 0 2vw;
+    margin: 1vw 1.2vw;
+    width: 200px;
+    height: 105px;
+
+    border: 2px solid #8f70ee;
+    border-radius: 5px;
+}
+
+.item-day-price .price-title {
+    margin-bottom: 1vw;
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.item-day-price .price-old-rent {
+    color: #ccc;
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 16px;
+    text-decoration: line-through;
+    margin-right: 1vw;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.price-rent {
+    margin-right: 0;
+    margin-top: 0;
+    color: #8f70ee;
+
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.color-text {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #999;
+}
+
+/*RENT-TERMS*/
+.item-wrapper-terms {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wrapper-left .left-side-terms {
+    padding: 10px;
+    width: 500px;
+    height: 220px;
+}
+
+.wrapper-right .right-side-terms {
+    padding: 10px;
+    width: 500px;
+    height: 220px;
+}
+
+.rent-cond-title {
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.rent-cond-co {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.rent-description {
+    margin-top: 0;
+    margin-left: 11px;
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #7e7e7e
+}
+
+.rent-description-last {
+    margin-top: 0;
+    line-height: 20px;
+    font-size: 18px;
+    color: #7e7e7e
+}
+
+/*END-RENT-TERMS*/
+
+.ready-to-rent {
+    display: flex;
+    justify-content: center;
+
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.rent-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.rent-btn .btn {
+    color: #fff;
+    background-color: #4E4C97;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    width: 230px;
+    padding: 11px;
+    margin: 0 10px 10px 0;
+    border: 2px solid #4E4C97;
+    border-radius: 15px;
+    display: inline-block;
+    justify-content: center;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover,
+.btn:focus {
+    color: #4E4C97;
+    background-color: #fff;
+    box-shadow: 0 0 5px #4E4C97, 0 0 15px #4E4C97 inset;
+}
 
 
+@media (max-width: 760px) {
+    .item-wrapper {
+        justify-content: center;
+    }
+
+    .wrapper-left .left-side-terms {
+        padding: 7px;
+        width: 350px;
+        height: 200px;
+    }
+
+    .wrapper-right .right-side-terms {
+        padding: 7px;
+        width: 350px;
+        height: 200px;
+    }
+
+    .rent-cond-title {
+        margin-bottom: 5px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .rent-cond-co {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    .rent-description {
+        margin-top: 0;
+        margin-left: 11px;
+        margin-bottom: 4px;
+        font-size: 14px;
+        color: #7e7e7e
+    }
+
+    .rent-description-last {
+        margin-top: 0;
+        font-size: 14px;
+        color: #7e7e7e
+    }
+}

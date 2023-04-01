@@ -137,7 +137,7 @@
                 totalPrice = (price * rentalDays);
                 discount = '0%'
             } else if (rentalDays >= 5 && rentalDays < 10) {
-                totalPrice = (price * rentalDays) * 0.9;
+                totalPrice = ((price - price * 0.1) * rentalDays) * 0.9;
                 discount = '10%'
             } else if (rentalDays >= 10 && rentalDays < 20) {
                 totalPrice = (price * rentalDays) * 0.75;
