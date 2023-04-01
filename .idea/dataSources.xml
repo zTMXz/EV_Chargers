@@ -10,5 +10,13 @@
       <jdbc-url>jdbc:postgresql://127.0.0.1:5432/EV_Chargers_DB</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="EV_Rent_DB@localhost" uuid="24fabf63-99f5-4cc6-b857-15f3030be29b">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>evrent_db</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
