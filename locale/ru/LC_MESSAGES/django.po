@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-31 12:31+0300\n"
+"POT-Creation-Date: 2023-04-01 20:14+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,32 +24,139 @@ msgstr ""
 msgid "Car Info"
 msgstr "Информация о машине"
 
-#: .\EV_rent\templates\EV_rent\car_detail.html:55
+#: .\EV_rent\templates\EV_rent\car_detail.html:56
 msgid "Description"
 msgstr "Описание"
 
-#: .\EV_rent\templates\EV_rent\car_detail.html:60
+#: .\EV_rent\templates\EV_rent\car_detail.html:61
 msgid "Specifications"
 msgstr "Характеристики"
 
-#: .\EV_rent\templates\EV_rent\car_detail.html:70
+#: .\EV_rent\templates\EV_rent\car_detail.html:73
 #: .\EV_rent\templates\EV_rent\car_list.html:44
 msgid "Seats"
 msgstr "Мест"
 
-#: .\EV_rent\templates\EV_rent\car_detail.html:109
+#: .\EV_rent\templates\EV_rent\car_detail.html:112
 #: .\EV_rent\templates\EV_rent\car_list.html:82
 msgid "km"
 msgstr "км"
 
-#: .\EV_rent\templates\EV_rent\car_detail.html:123
+#: .\EV_rent\templates\EV_rent\car_detail.html:128
 msgid "year"
 msgstr "год"
 
-#: .\EV_rent\templates\EV_rent\car_detail.html:135
+#: .\EV_rent\templates\EV_rent\car_detail.html:140
 #: .\EV_rent\templates\EV_rent\car_list.html:106
 msgid "HP"
 msgstr "л.с."
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:165
+msgid "Prices"
+msgstr "Цены"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:169
+#: .\EV_rent\templates\EV_rent\car_detail.html:175
+#: .\EV_rent\templates\EV_rent\car_detail.html:181
+#: .\EV_rent\templates\EV_rent\car_detail.html:187
+msgid "days"
+msgstr "суток"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:172
+#: .\EV_rent\templates\EV_rent\car_detail.html:178
+#: .\EV_rent\templates\EV_rent\car_detail.html:184
+#: .\EV_rent\templates\EV_rent\car_detail.html:190
+#: .\EV_rent\templates\EV_rent\car_list.html:114
+msgid "day"
+msgstr "день"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:194
+msgid "Rental Conditions"
+msgstr "Условия аренды"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:198
+msgid "Tenant Requirements"
+msgstr "Требования к арендатору"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:199
+msgid "Age from 21 years"
+msgstr "Возраст от 21 года"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:200
+msgid "Minimum 20 years old"
+msgstr "Минимальный от 20 лет"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:201
+msgid "Driving experience from 3 years"
+msgstr "Стаж вождения от 3 лет"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:202
+msgid "Minimum 2 years"
+msgstr "Минимальный от 2 лет"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:204
+msgid ""
+"A driver who is between 20 and 21 years of age is classified as a \"Young "
+"Driver\""
+msgstr ""
+"Водитель, возраст которого от 20 лет до 21 года – классифицируется как "
+"\"Молодой водитель\""
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:208
+msgid "Border crossing"
+msgstr "Пересечение границы"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:209
+msgid "Renting abroad is possible, the option is paid"
+msgstr "Возможна аренда с выездом за границу, опция платная."
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:214
+msgid "Mileage"
+msgstr "Пробег"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:215
+msgid "No mileage limit"
+msgstr "Без ограничений по пробегу"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:216
+msgid "350 km/day included FREE OF CHARGE"
+msgstr "350 км/cутки включено БЕСПЛАТНО"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:217
+msgid "Additional km: 1 km / $0.1"
+msgstr "Дополнительные км: 1 км / $0.1"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:218
+msgid ""
+"The included mileage is summed up for the entire rental period, you can "
+"drive more on one day and less on the other"
+msgstr ""
+"Включенный пробег суммируется за весь период аренды, можно в один день "
+"проехать больше, в другой меньше"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:222
+msgid "Fuel terms"
+msgstr "Условия по топливу"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:223
+msgid "Return with the same amount of fuel"
+msgstr "Возврат с тем же количеством топлива"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:225
+msgid ""
+"Upon receipt of the car, the fuel tank will be completely or partially filled"
+msgstr ""
+"При получении автомобиля топливный бак будет заполнен полностью или частично"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:230
+msgid "Ready to rent"
+msgstr "Хотите арендовать"
+
+#: .\EV_rent\templates\EV_rent\car_detail.html:232
+#: .\EV_rent\templates\EV_rent\car_list.html:120 .\templates\base.html:66
+#: .\templates\base.html:129
+msgid "Rent"
+msgstr "Арендовать"
 
 #: .\EV_rent\templates\EV_rent\car_list.html:4
 msgid "Car List"
@@ -63,18 +170,9 @@ msgstr "Все"
 msgid "Available"
 msgstr "Доступные"
 
-#: .\EV_rent\templates\EV_rent\car_list.html:114
-msgid "day"
-msgstr "день"
-
 #: .\EV_rent\templates\EV_rent\car_list.html:117
 msgid "temporarily unavailable.."
 msgstr "временно недоступна.."
-
-#: .\EV_rent\templates\EV_rent\car_list.html:120 .\templates\base.html:66
-#: .\templates\base.html:129
-msgid "Rent"
-msgstr "Аренда"
 
 #: .\EV_rent\templates\EV_rent\rental_request.html:7
 #: .\EV_rent\templates\EV_rent\rental_request.html:29
@@ -100,11 +198,11 @@ msgstr "Количество дней"
 msgid "Total Cost"
 msgstr "Итоговая стоимость"
 
-#: .\EV_rent\templates\EV_rent\rental_request.html:78
+#: .\EV_rent\templates\EV_rent\rental_request.html:93
 msgid "Your discount is"
 msgstr "Ваша скидка составляет"
 
-#: .\EV_rent\templates\EV_rent\rental_request.html:90
+#: .\EV_rent\templates\EV_rent\rental_request.html:105
 #: .\EV_rent\templates\EV_rent\service_request.html:58
 msgid "You are not authorized! You will be redirected to the login page.."
 msgstr ""
