@@ -110,6 +110,8 @@ ENV/
 env.bak/
 venv.bak/
 
+media/users/driver_license
+
 # Spyder project settings
 .spyderproject
 .spyproject

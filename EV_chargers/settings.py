@@ -14,6 +14,7 @@ import environ
 
 env = environ.Env()
 environ.Env.read_env()
+
 # superuser login: zTMXz, pass: tima2002
 # django-admin makemessages -l ru -e html
 # django-admin compilemessages
@@ -64,12 +65,12 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "users",
     "yandex_maps_ev",
-    "django_google_maps",
     'corsheaders',
     'crispy_forms',
     "EV_rent",
     "widget_tweaks",
-    "sass_processor"
+    "sass_processor",
+    "fontawesomefree"
 ]
 
 MIDDLEWARE = [

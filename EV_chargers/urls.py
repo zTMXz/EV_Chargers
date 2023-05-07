@@ -23,10 +23,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("i18n/", include('django.conf.urls.i18n'))
-    # path('', TemplateView.as_view(template_name="home.html"), name="home"),
-    # path('users/', include('users.urls')),
-    # path('map/', include('yandex_maps_ev.urls')),
-    # path('rent/', include('EV_rent.urls')),
 ]
 
 urlpatterns += i18n_patterns (

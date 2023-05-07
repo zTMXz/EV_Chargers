@@ -59,7 +59,7 @@
 
     <div>
         <div class="car-desc title-side-line">{% trans "Specifications" %}</div>
-        <div class="dima">
+        <div class="car-item">
             <div class="item-wrapper">
                 <div class="wrapper-left">
                     <div class="items-left">
@@ -168,24 +168,24 @@
         <div class="item-day-price">
             <p class="price-title">1-4 {% trans 'days' %}</p>
             <p class="price-old-rent" style="color: white">.</p>
-            <span class="price-rent">${{ car.rent_price }}</span>
+            <span class="price-rent">{{ car.rent_price }} BYN</span>
             <span class="color-text"> / {% trans 'day' %}</span>
         </div>
         <div class="item-day-price">
             <p class="price-title">5-9 {% trans 'days' %}</p>
-            <p class="price-old-rent">${{ car.rent_price }}</p>
+            <p class="price-old-rent">{{ car.rent_price }} BYN</p>
             <span id="price59" class="price-rent"></span>
             <span class="color-text"> / {% trans 'day' %}</span>
         </div>
         <div class="item-day-price">
             <p class="price-title">10-19 {% trans 'days' %}</p>
-            <p class="price-old-rent">${{ car.rent_price }}</p>
+            <p class="price-old-rent">{{ car.rent_price }} BYN</p>
             <span id="price12" class="price-rent"></span>
             <span class="color-text"> / {% trans 'day' %}</span>
         </div>
         <div class="item-day-price">
             <p class="price-title">20-30 {% trans 'days' %}</p>
-            <div class="price-old-rent">${{ car.rent_price }}</div>
+            <div class="price-old-rent">{{ car.rent_price }} BYN</div>
             <span id="price23" class="price-rent"></span>
             <span class="color-text"> / {% trans 'day' %}</span>
         </div>
@@ -214,7 +214,7 @@
                 <p class="rent-cond-title">{% trans 'Mileage' %}</p>
                 <p class="rent-cond-co">- {% trans 'No mileage limit' %}</p>
                 <p class="rent-cond-co">- {% trans '350 km/day included FREE OF CHARGE' %}</p>
-                <p class="rent-cond-co">- {% trans 'Additional km: 1 km / $0.1' %}</p>
+                <p class="rent-cond-co">- {% trans 'Additional km: 1 km / 0.25 BYN' %}</p>
                 <p class="rent-description-last">{% trans 'The included mileage is summed up for the entire rental period, you can drive more on one day and less on the other' %}</p>
             </div>
 
@@ -229,7 +229,7 @@
 
     <div class="ready-to-rent">{% trans 'Ready to rent' %}?</div>
     <div class="rent-btn">
-        <a href="{% url 'rental_request' car_id=car.id %}" class="btn">{% trans 'Rent' %}</a>
+        <a href="{% url 'rental_request' car_id=car.id %}" class="btn {% if not user.is_authenticated %} disabled {% endif %}">{% trans 'Rent' %}</a>
     </div>
 
 
@@ -249,8 +249,8 @@
         let result12 = value * 0.75;
         let result23 = value * 0.5;
 
-        document.getElementById("price59").innerHTML = '$' + result59.toFixed(2);
-        document.getElementById("price12").innerHTML = '$' + result12.toFixed(2);
-        document.getElementById("price23").innerHTML = '$' + result23.toFixed(2);
+        document.getElementById("price59").innerHTML = result59.toFixed(2) + ' BYN';
+        document.getElementById("price12").innerHTML = result12.toFixed(2) + ' BYN';
+        document.getElementById("price23").innerHTML = result23.toFixed(2) + ' BYN';
     </script>
 {% endblock %}

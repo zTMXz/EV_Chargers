@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-01 20:14+0300\n"
+"POT-Creation-Date: 2023-05-07 19:36+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -123,7 +123,9 @@ msgid "350 km/day included FREE OF CHARGE"
 msgstr "350 км/cутки включено БЕСПЛАТНО"
 
 #: .\EV_rent\templates\EV_rent\car_detail.html:217
-msgid "Additional km: 1 km / $0.1"
+#, fuzzy
+#| msgid "Additional km: 1 km / $0.1"
+msgid "Additional km: 1 km / 0.25 BYN"
 msgstr "Дополнительные км: 1 км / $0.1"
 
 #: .\EV_rent\templates\EV_rent\car_detail.html:218
@@ -153,8 +155,8 @@ msgid "Ready to rent"
 msgstr "Хотите арендовать"
 
 #: .\EV_rent\templates\EV_rent\car_detail.html:232
-#: .\EV_rent\templates\EV_rent\car_list.html:120 .\templates\base.html:66
-#: .\templates\base.html:129
+#: .\EV_rent\templates\EV_rent\car_list.html:120 .\templates\base.html:67
+#: .\templates\base.html:182
 msgid "Rent"
 msgstr "Арендовать"
 
@@ -180,12 +182,14 @@ msgid "Rental Request"
 msgstr "Запрос Аренды"
 
 #: .\EV_rent\templates\EV_rent\rental_request.html:49
-#: .\templates\registration\profile.html:23
+#: .\templates\registration\profile.html:120
+#: .\templates\registration\profile.html:124
 msgid "First Name"
 msgstr "Имя"
 
 #: .\EV_rent\templates\EV_rent\rental_request.html:55
-#: .\templates\registration\profile.html:27
+#: .\templates\registration\profile.html:131
+#: .\templates\registration\profile.html:135
 msgid "Last Name"
 msgstr "Фамилия"
 
@@ -209,8 +213,8 @@ msgstr ""
 "Вы не авторизованы! Сейчас вы будете перенаправлены на страницу авторизации.."
 
 #: .\EV_rent\templates\EV_rent\service_request.html:5
-#: .\EV_rent\templates\EV_rent\service_request.html:28 .\templates\base.html:69
-#: .\templates\base.html:130
+#: .\EV_rent\templates\EV_rent\service_request.html:28 .\templates\base.html:70
+#: .\templates\base.html:183
 msgid "Service Request"
 msgstr "Сообщить о поломке"
 
@@ -219,7 +223,7 @@ msgid "Choose car"
 msgstr "Выберите машину"
 
 #: .\EV_rent\templates\EV_rent\service_request.html:48
-#: .\templates\registration\profile.html:38
+#: .\templates\registration\profile.html:141
 msgid "Submit"
 msgstr "Подтвердить"
 
@@ -228,43 +232,39 @@ msgstr "Подтвердить"
 msgid "Service Request Submitted"
 msgstr "Сообщение о поломке принято"
 
-#: .\templates\base.html:60 .\templates\base.html:127 .\templates\home.html:4
+#: .\templates\base.html:61 .\templates\base.html:180 .\templates\home.html:4
 msgid "Home"
 msgstr "Главная"
 
-#: .\templates\base.html:63 .\templates\base.html:128
+#: .\templates\base.html:64 .\templates\base.html:181
 msgid "Map"
 msgstr "Карта"
 
-#: .\templates\base.html:72
+#: .\templates\base.html:73
 msgid "About"
 msgstr "О нас"
 
-#: .\templates\base.html:77
-msgid "Language"
-msgstr "Язык"
-
-#: .\templates\base.html:95
+#: .\templates\base.html:147
 msgid "Settings"
 msgstr "Настройки"
 
-#: .\templates\base.html:96 .\templates\home.html:17
+#: .\templates\base.html:148 .\templates\home.html:17
 msgid "Sign Out"
 msgstr "Выйти"
 
-#: .\templates\base.html:99
+#: .\templates\base.html:152
 msgid "Admin Panel"
 msgstr "Админ Панель"
 
-#: .\templates\base.html:126
+#: .\templates\base.html:179
 msgid "Useful links"
 msgstr "Полезные ссылки"
 
-#: .\templates\base.html:158
+#: .\templates\base.html:211
 msgid "Contact"
 msgstr "Контакты"
 
-#: .\templates\base.html:164
+#: .\templates\base.html:217
 msgid "Minsk, Gikalo 9, BY"
 msgstr "Беларусь, Минск, ул. Гикало 9"
 
@@ -283,17 +283,16 @@ msgid "or use you username for sign in"
 msgstr "или используйте ваш username для входа"
 
 #: .\templates\registration\login.html:36
-#: .\templates\registration\profile.html:31
 msgid "Forgot password"
 msgstr "Забыли пароль"
 
 #: .\templates\registration\login.html:39
-#: .\templates\registration\register.html:50
+#: .\templates\registration\register.html:62
 msgid "Sign in"
 msgstr "Войти"
 
 #: .\templates\registration\login.html:40
-#: .\templates\registration\register.html:49
+#: .\templates\registration\register.html:61
 msgid "Sign up"
 msgstr "Регистрация"
 
@@ -329,26 +328,43 @@ msgid "Password Reset"
 msgstr "Пароль"
 
 #: .\templates\registration\profile.html:5
-#, fuzzy
-#| msgid "Edit Profile"
+#: .\templates\registration\profile.html:103
 msgid "Profile"
 msgstr "Профиль"
 
-#: .\templates\registration\profile.html:18
-msgid "Edit Profile"
-msgstr "Редактировать профиль"
+#: .\templates\registration\profile.html:151
+msgid "driver license"
+msgstr "Ваше водительское удостоверение"
+
+#: .\templates\registration\profile.html:154
+msgid "driver license with you"
+msgstr "Ваше фото вместе с водительским удостоверением"
+
+#: .\templates\registration\profile.html:160
+msgid "Rental History"
+msgstr "История аренды"
 
 #: .\templates\registration\register.html:25
 msgid "or use you email and username for sign up"
 msgstr "или используйте ваш email и username для регистрации"
 
-#: .\templates\registration\register.html:37
+#: .\templates\registration\register.html:38
 msgid "Password"
 msgstr "Пароль"
 
-#: .\templates\registration\register.html:40
+#: .\templates\registration\register.html:42
 msgid "Confirm Password"
 msgstr "Подтвердите пароль"
+
+#: .\templates\registration\register.html:45
+#: .\templates\registration\register.html:46
+#: .\templates\registration\register.html:51
+msgid "Driver license"
+msgstr "Ваше водительское удостоверение"
+
+#: .\templates\registration\register.html:50
+msgid "Photo with You and driver license"
+msgstr "Ваше фото вместе с водительским удостоверением"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:221
@@ -394,6 +410,12 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:249
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "Language"
+#~ msgstr "Язык"
+
+#~ msgid "Edit Profile"
+#~ msgstr "Редактировать профиль"
 
 #, fuzzy
 #~| msgid "First Name"

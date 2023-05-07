@@ -8,5 +8,8 @@ class User(AbstractUser):
         unique=True
     )
 
+    driver_license = models.ImageField(upload_to='users/driver_license', blank=True)
+    driver_license_with_owner = models.ImageField(upload_to='users/driver_license', blank=True)
+
     USERNAME_FIELD = "username"
-    REQUIRED_FIELDS = ["email"]
+    REQUIRED_FIELDS = ["email", "driver_license", "driver_license", "driver_license_with_owner"]

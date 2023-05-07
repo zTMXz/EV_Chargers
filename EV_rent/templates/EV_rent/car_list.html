@@ -111,13 +111,14 @@
                         <div class="product-bottom-details d-flex justify-content-between align-items-center">
 {#                            <a href="{{ car.get_absolute_url }}" class="btn btn1 btn-sm btn-outline-secondary">{% trans "View" %}</a>#}
                             <div class="product-price">
-                                ${{ car.rent_price }} <span class="color-text"> / {% trans 'day' %}</span>
+                                {{ car.rent_price }} BYN <span class="color-text"> / {% trans 'day' %}</span>
                             </div>
                             {% if car.is_broken == True or car.is_rented == True %}
                                 <span class="unavailable">{% trans 'temporarily unavailable..' %}</span>
                             {% else %}
                                 <a href="{% url 'rental_request' car_id=car.id %}"
-                                   class="btn btn2">{% trans "Rent" %}</a>
+                                   class="btn btn2 {% if not user.is_authenticated %} disabled {% endif %}">{% trans "Rent" %}
+                                </a>
                             {% endif %}
                         </div>
                     </div>

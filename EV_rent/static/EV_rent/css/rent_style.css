@@ -98,7 +98,7 @@
 }
 
 .product-price {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 600;
     color: #4E4C97;
 }
@@ -110,6 +110,7 @@
 }
 
 .unavailable {
+    max-width: 90px;
     font-size: 15px;
     font-weight: 600;
     color: #e86868;

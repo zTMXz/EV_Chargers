@@ -29,7 +29,7 @@ function init() {
         // Подписывается на событие получения результатов поиска с сервера.
         searchControl.events.add('load', function (e) {
             var count = searchControl.getResultsCount();
-            console.log("Количество найденных результатов поиска: " + count);
+            // console.log("Количество найденных результатов поиска: " + count);
         })
     });
 }

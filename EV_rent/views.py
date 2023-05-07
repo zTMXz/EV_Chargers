@@ -71,3 +71,4 @@ def rental_request(request, car_id):
 
 def rental_request_success(request):
     return render(request, 'EV_rent/service_request_success.html')
+

@@ -24,7 +24,7 @@
 
                 <span class="description">{% trans "or use you email and username for sign up" %}:</span>
 
-                <form class="form-horizontal" action="{% url 'register' %}" method="post">
+                <form class="form-horizontal" action="{% url 'register' %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
 
                     <div class="form-group">
@@ -34,15 +34,27 @@
                         {% render_field form.username|add_class:"form-control" placeholder="Username" %}
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="password" name="password1" id="id_password1" placeholder="{% trans "Password" %}">
+                        <input class="form-control" type="password" name="password1" id="id_password1"
+                               placeholder="{% trans "Password" %}">
                     </div>
-                    <div class="form-group" style="margin-bottom: 35px">
-                         <input class="form-control" type="password" name="password2" id="id_password2" placeholder="{% trans "Confirm Password" %}">
+                    <div class="form-group" style="margin-bottom: 25px">
+                        <input class="form-control" type="password" name="password2" id="id_password2"
+                               placeholder="{% trans "Confirm Password" %}">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 15px; text-align: left">
+                        <label for="id_driver_license" class="form-label description">{% trans 'Driver license'%} </label>
+                        <input class="form-control" accept="image/*" name="driver_license" type="file" id="id_driver_license" placeholder="{% trans 'Driver license'%}">
+
+                    </div>
+                    <div class="form-group" style="margin-bottom: 25px">
+                        <label for="id_driver_license_with_owner" class="form-label description">{% trans 'Photo with You and driver license'%} </label>
+                        <input class="form-control" accept="image/*" name="driver_license_with_owner" type="file" id="id_driver_license_with_owner" placeholder="{% trans 'Driver license'%}">
                     </div>
 
-{#                  ВРЕМЕННО!!!!!!!!!!!!!!!!!!!!!!!!#}
+
+                    {#                  ВРЕМЕННО!!!!!!!!!!!!!!!!!!!!!!!!#}
                     {% if form.errors %}
-                       <span class="description">{{ form.errors }}</span>
+                        <span class="description">{{ form.errors }}</span>
                     {% endif %}
 
 
